@@ -1,4 +1,3 @@
 <h1>STT-RAM</h1>
 <h2>Background</h2>
-Spin Transfer Torque Random Access Memory (STT-RAM ), as a form of non-volatile memory that leverages electron spin to store and retrieve data, has the potential to replace SRAM in various applications due to its advantages of
-high density and lower power leakage.
+Spin Transfer Torque Random Access Memory (STT-RAM ) is a non-volatile memory with advantages such as high density and lower power leakage. However, it also has the issue of two-step state transitions（TTs）, which greatly impacts performance. 
