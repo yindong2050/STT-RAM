@@ -21,10 +21,10 @@ public class TTUtil {
     }
 
     /**
-     * 统计给定编码方案的开销
+     * Count the Cost of a Given Encoding Scheme
      *
-     * @param method 编码方案
-     * @return 状态转换次数
+     * @param method Coding Scheme
+     * @return Number of State Transitions
      */
     Transition methodTransition(List<Integer> method) {
         Transition total = new Transition();
@@ -45,12 +45,12 @@ public class TTUtil {
     }
 
     /**
-     * 选择最优的目标编码
+     * Select the Optimal Target Encoding
      *
-     * @param from       当前数据编码
-     * @param method     目标数据映射到的所有可选的编码
-     * @param transition 用于接收计算的状态转换次数结果
-     * @return 最优的目标编码在codes中的下标
+     * @param from       Current Data Encoding
+     * @param method     All Optional Encodings to Which the Target Data is Mapped
+     * @param transition Used to Receive the Calculated State Transition Count Results
+     * @return The Subscript of the Optimal Target Encoding in Codes
      */
     public int selectCode(int from, int to, List<Integer> method, Transition transition) {
         int groupSize = 1 << (codeLen - dataLen);
