@@ -12,7 +12,7 @@ public class GeneticAlgorithm {
 
     private static final Random random = new Random();
 
-    // Initial population
+    // Initial Population
     public List<List<Integer>> initializePopulation(int populationSize) {
         int codeSize = 1 << ttUtil.getCodeLen();
         List<List<Integer>> population = new ArrayList<>();
@@ -27,7 +27,7 @@ public class GeneticAlgorithm {
         return population;
     }
 
-    // Selection operation
+    // Selection Operation
     public List<List<Integer>> select(List<List<Integer>> population, List<Double> fitnesses) {
         List<List<Integer>> selected = new ArrayList<>();
         for (int i = 0; i < 2; i++) {
