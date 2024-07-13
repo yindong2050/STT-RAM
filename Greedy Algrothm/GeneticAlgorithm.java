@@ -12,7 +12,7 @@ public class GeneticAlgorithm {
 
     private static final Random random = new Random();
 
-    // 初始化种群
+    // Initial population
     public List<List<Integer>> initializePopulation(int populationSize) {
         int codeSize = 1 << ttUtil.getCodeLen();
         List<List<Integer>> population = new ArrayList<>();
@@ -27,7 +27,7 @@ public class GeneticAlgorithm {
         return population;
     }
 
-    // 选择操作
+    // Selection operation
     public List<List<Integer>> select(List<List<Integer>> population, List<Double> fitnesses) {
         List<List<Integer>> selected = new ArrayList<>();
         for (int i = 0; i < 2; i++) {
@@ -45,7 +45,7 @@ public class GeneticAlgorithm {
         return selected;
     }
 
-    // 部分匹配交叉（PMX）
+    // Partially Matched Crossing（PMX）
     public List<List<Integer>> crossover(List<Integer> parent1, List<Integer> parent2) {
         int size = parent1.size();
         int cxPoint1 = random.nextInt(size - 1);
@@ -69,7 +69,7 @@ public class GeneticAlgorithm {
         return offspring;
     }
 
-    // 交换变异
+    // Exchange Variation
     public void mutate(List<Integer> individual, double mutationRate) {
         for (int i = 0; i < individual.size(); i++) {
             if (random.nextDouble() < mutationRate) {
@@ -79,7 +79,7 @@ public class GeneticAlgorithm {
         }
     }
 
-    // 遗传算法主流程
+    // Main Process
     public List<Integer> geneticAlgorithm(int populationSize, int generations, double mutationRate, List<Transition> transitions) {
 
         List<List<Integer>> population = initializePopulation(populationSize);
@@ -97,7 +97,7 @@ public class GeneticAlgorithm {
                     bestIndividual = individual;
                 }
             }
-            transitions.add(bestTrans); // 记录每次迭代的最佳序列
+            transitions.add(bestTrans); // Record the Optimal Sequence for Each Iteration
 
             List<List<Integer>> newPopulation = new ArrayList<>();
             for (int i = 0; i < populationSize / 2; i++) {
@@ -126,7 +126,7 @@ public class GeneticAlgorithm {
                 bestIndividual = individual;
             }
         }
-        transitions.add(bestTrans); // 记录每次迭代的最佳序列
+        transitions.add(bestTrans); // Record the Optimal Sequence for Each Iteration
         return bestIndividual;
     }
 
@@ -147,7 +147,7 @@ public class GeneticAlgorithm {
         List<Transition> bestTts = new ArrayList<>();
         List<Integer> bestMethod = genetic.geneticAlgorithm(populationSize, generations, mutationRate, bestTts);
         Transition trans = util.methodTransition(bestMethod);
-        System.out.println("最佳序列: " + bestMethod);
-        System.out.println("最小TT: " + trans);
+        System.out.println("Optimal Sequence: " + bestMethod);
+        System.out.println("Minimum TT: " + trans);
     }
 }
