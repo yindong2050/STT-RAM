@@ -30,9 +30,9 @@ public class Transition {
     }
 
     /**
-     * 计算给定状态转换次数对应的能量开销
+     * Calculate the Energy Cost Corresponding to a Given Number of State Transitions
      *
-     * @return 能量开销
+     * @return Energy Consumption
      */
     public long cost() {
         return st * 843L + ht * 1659L + tt * 2502L;
@@ -50,16 +50,16 @@ public class Transition {
     }
 
     /**
-     * 统计从 from 改写为 to 的状态转换次数
+     * Count the Number of State Transitions
      *
-     * @param from 当前数据编码
-     * @param to   目标数据编码
-     * @return 状态转换次数
+     * @param from Current Data Encoding
+     * @param to   Target Data Encoding
+     * @return Number of State Transitions
      */
     public static Transition count(int from, int to, int codeLen) {
         Transition res = new Transition();
         int a = from, b = to;
-        // 每次比较两位
+        // Compare Two Bits at a time
         for (int i = 0; i < codeLen; i += 2) {
             int x = a & 0b11;
             int y = b & 0b11;
