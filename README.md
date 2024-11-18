@@ -1,6 +1,6 @@
 <h1>STT-RAM</h1>
 <h2>Background</h2>
-Spin Transfer Torque Random Access Memory (STT-RAM) is a non-volatile memory with advantages such as high density and lower power leakage. However, it has the issue of two-step state transitions（TTs）, which greatly impact performance. We use some methods to avoid TTs.
+Spin Transfer Torque Random Access Memory (STT-RAM) is a non-volatile memory with advantages such as high density and lower power leakage. However, it has the issue of two-step state transitions(TTs), which greatly impact performance. We use some methods to avoid TTs.
 <h2>methods</h2>
 <h3>Basic algorithm</h3>
 The basic algorithm uses a full permutation search of all possible sequences to find the solution. This algorithm can find the optimal solution. The disadvantage is that it is prolonged. If the data is large, it will take a long time.
