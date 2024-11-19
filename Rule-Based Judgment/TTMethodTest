@@ -1,1 +1,27 @@
+package com.java.test;
+
+import org.junit.Test;
+
+import com.java.handle.STTRAMHandle;
+
+public class TTMethodTest {
+	
+	/*Test the rule-based judgment method
+	 * */
+	@Test
+	public void RuleBasedJudgmentMethod(){
+		
+		STTRAMHandle sttRAMHandle = new STTRAMHandle ();
+		
+		String TTEvaluateMethod = "rule-based judgment";
+		
+		int M = 3;
+		
+		int N = 4;
+		
+		sttRAMHandle.STTEvaluateHandleTT(TTEvaluateMethod, M, N);
+		
+	}
+
+}
 
