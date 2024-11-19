@@ -1,26 +1,28 @@
 
 
-# Rule-Based Judgment Algorithm
+# Rule-Based Judgment Method
 
 ## Background
 
-Spin Transfer Torque Random Access Memory (STT-RAM ) is a non-volatile memory with advantages such as high density and lower power leakage, but it also has the issue of two-step state transitions（TTs）, which has a great impact on performance. The GA algorithm is a greedy algorithm. We use this algorithm to obtain the optimal mapping method in SST-RAM. The algorithm can reduce or even eliminate the problem of TTs.
+Spin Transfer Torque Random Access Memory (STT-RAM ) is a non-volatile memory with advantages such as high density and lower power leakage, but it also has the issue of two-step state transitions（TTs）, which has a great impact on performance. The rule-based judgment method is a simple method. We use this method to obtain the minimum TTs in MLC STT-RAM. The method can reduce or even eliminate the problem of TTs.
 
-## Software dependences
 
-All versions from Java 8 and above
+## Software Dependencies
+
+All versions from Java 8 and above, Eclipse, IDEA etc...
 
 ## Java Compiling
 
-```shell
-javac -encoding utf8 -d ./target ./src/com/java/ga/*.java
+```
+Eclipse, IDEA etc ...
+Create a new Java project and copy all files into the project for compilation.
 ```
 
 ## Java Running
 
-```shell
-#args: <m> <n> <population size> <generations> <mutation rate>
-java -classpath ./target com.java.ga.GeneticAlgorithm 3 4 200 1000 0.02
+```
+Eclipse, IDEA etc ...
+Directly call the method of AdvancedCombinationMethod in the STTRAMTest.java to test.
 ```
 
 ## Result
