@@ -8,6 +8,8 @@ The basic algorithm uses a full permutation search of all possible sequences to 
 The heuristic algorithm is a kind of greedy algorithm. We use this algorithm to obtain the optimal mapping method in SST-RAM. In this algorithm, we randomly obtain one result each time, which saves time in finding the best mapping. However, it cannot be used to obtain all possible results at the same time.
 <h3>Advanced algorithm</h3>
 The advanced algorithm also called the non-redundant algorithm, removes the repeated sequences in the basic algorithm and can also get the optimal solution. The time complexity of the algorithm is much faster than that of the basic algorithm. If the amount of data is large, it still takes a long time. When testing the (3, 4) method, the result can be obtained within 1 minute. If the data of (5, 6), (7, 8), and so on is tested, it will take longer.
+<h3>Rule-based judgment</h3>
+The rule-based judgment method is combined according to the rules for eliminating TT. Since only the (3,4)-based expansion method can eliminate TT, we only use it in this extension method.
 <h2>Tools</h2>
 Java Platform, JDK, JavaIDE(such as Eclipse, IDEA)
 <h2>Java compile and run </h2>
